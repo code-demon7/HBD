@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(180deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass-card {
+    width: 330px;
+    height: 580px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 55px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 35px 20px;
+    text-align: center;
+    animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* 📝 العنوان */
+
+h1 {
+    color: white;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+
+/* 🎂 التورتة */
+
+.cake-box {
+    position: relative;
+    margin-bottom: auto;
+}
+
+.cake-box img {
+    width: 120px;
+}
+
+
+/* 🔥 الشموع */
+
+.flame {
+    position: absolute;
+    width: 14px;
+    height: 32px;
+    background: radial-gradient(circle at 50% 60%, #fff, #ffe066, #ffb703, #fb8500);
+    border-radius: 50%;
+    top: -28px;
+    animation: flicker 0.18s infinite alternate;
+}
+
+.flame.left {
+    left: 62px;
+}
+
+.flame.right {
+    right: 62px;
+}
+
+@keyframes flicker {
+    from {
+        transform: scale(1);
+        opacity: 0.85;
+    }
+    to {
+        transform: scale(1.12);
+        opacity: 1;
+    }
+}
+
+
+/* 🎤 الزرار */
+
+.mic-btn {
+    margin-top: 40px;
+    width: 85%;
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    background: #ff6f91;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mic-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+}

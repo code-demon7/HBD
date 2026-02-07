@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(180deg, #FF9194, #F9C8BA);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bgMove 6s infinite alternate;
+}
+
+@keyframes bgMove {
+    from {
+        filter: brightness(1);
+    }
+    to {
+        filter: brightness(1.05);
+    }
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* 🧊 الكارد */
+
+.card {
+    width: 290px;
+    background: rgba(255, 247, 248, 0.95);
+    padding: 28px 22px;
+    border-radius: 32px;
+    text-align: center;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.18);
+    animation: pop 0.8s ease;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* 📝 العنوان */
+
+h2 {
+    margin-bottom: 22px;
+    font-weight: 500;
+    color: #333;
+}
+
+
+/* 🔐 input */
+
+input {
+    width: 100%;
+    padding: 11px;
+    border-radius: 22px;
+    border: 2px solid #E5A5B7;
+    outline: none;
+    margin-bottom: 18px;
+    font-size: 16px;
+    text-align: center;
+    background: transparent;
+}
+
+
+/* 🔘 الزرار */
+
+button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 28px;
+    background: linear-gradient(90deg, #FF6388, #FF8FA3);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 20px rgba(255, 99, 136, 0.5);
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+/* ❌ غلط */
+
+.shake {
+    animation: shake 0.4s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
