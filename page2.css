@@ -55,7 +55,7 @@ h1 {
 }
 
 .cake-box img {
-    width: 120px;
+    width: 220px;
 }
 
 
@@ -67,16 +67,16 @@ h1 {
     height: 32px;
     background: radial-gradient(circle at 50% 60%, #fff, #ffe066, #ffb703, #fb8500);
     border-radius: 50%;
-    top: -28px;
+    top: 65px;
     animation: flicker 0.18s infinite alternate;
 }
 
 .flame.left {
-    left: 62px;
+    left: 105px;
 }
 
 .flame.right {
-    right: 62px;
+    right: 105px;
 }
 
 @keyframes flicker {
@@ -94,7 +94,7 @@ h1 {
 /* 🎤 الزرار */
 
 .mic-btn {
-    margin-top: 40px;
+    margin-top: -10px;
     width: 85%;
     padding: 14px;
     border-radius: 30px;
@@ -111,4 +111,18 @@ h1 {
 .mic-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+}
+
+.celebration span {
+    position: absolute;
+    bottom: -40px;
+    font-size: 22px;
+    animation: rise 3s linear forwards;
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
 }
