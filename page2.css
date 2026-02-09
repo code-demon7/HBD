@@ -95,6 +95,7 @@ h1 {
 
 .mic-btn {
     margin-top: 40px;
+    display: block;
     width: 85%;
     padding: 14px;
     border-radius: 30px;
