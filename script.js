@@ -35,7 +35,7 @@ micBtn.addEventListener("click", async() => {
 
             // لو نفخ
             if (volume > 60) {
-                window.location.href = "balloons.html";
+                window.location.href = "wish.html";
             } else {
                 requestAnimationFrame(detectBlow);
             }
