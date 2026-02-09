@@ -20,7 +20,14 @@
 
         <img src="assets/images/cakeoff.png" class="cake" alt="cake">
 
-        <button class="next-btn">NEXT</button>
+        <button id="nextBtn" class="next-btn">NEXT</button>
+        <script>
+            document.getElementById("nextBtn").addEventListener("click", () => {
+                window.location.href = "letter.html";
+            });
+        </script>
+
+
     </div>
 
 </body>

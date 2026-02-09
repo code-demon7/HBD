@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Letter</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(#ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        
+        .wrap {
+            text-align: center;
+        }
+        
+        h2 {
+            color: white;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+        }
+        
+        .envelope {
+            width: 260px;
+            cursor: pointer;
+            animation: float 2s ease-in-out infinite;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+        
+        .envelope.open {
+            transform: scale(1.2) rotate(8deg);
+            opacity: 0;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-12px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <h2>TAP TO OPEN</h2>
+
+        <img src="assets/images/vitage.png" class="envelope" id="env" onclick="openLetter()" />
+    </div>
+
+    <script>
+        function openLetter() {
+            const env = document.getElementById("env");
+            env.classList.add("open");
+
+            setTimeout(() => {
+                window.location.href = "message.html";
+            }, 700);
+        }
+    </script>
+
+</body>
+
+</html>
