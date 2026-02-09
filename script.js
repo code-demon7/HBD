@@ -13,7 +13,7 @@ function unlock() {
         card.classList.add("shake");
     }
 }
-const micBtn = document.getElementById("micBtn");
+const micBtn = document.getElementById("mic-btn");
 
 micBtn.addEventListener("click", async() => {
     try {
