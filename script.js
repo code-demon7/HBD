@@ -44,6 +44,6 @@ micBtn.addEventListener("click", async() => {
         detectBlow();
 
     } catch (err) {
-        alert("لازم تسمح بالمايك 😅");
+        alert("شغلي الميك ينن عيني مش تشليني 😅");
     }
 });
