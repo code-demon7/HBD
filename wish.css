@@ -68,7 +68,7 @@ h1 {
     border-radius: 50%;
     position: absolute;
     bottom: -100px;
-    animation: fly 8s infinite ease-in;
+    animation: fly 2.5s infinite ease-in;
 }
 
 .pink {
