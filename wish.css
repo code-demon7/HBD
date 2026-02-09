@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    font-family: 'serif';
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(#ff9aa9, #ffd6c9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+/* الكارت */
+
+.card {
+    width: 90%;
+    max-width: 360px;
+    height: 85vh;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 40px;
+    padding: 30px 20px;
+    text-align: center;
+    animation: cardIn 1s ease;
+}
+
+h1 {
+    color: white;
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    animation: fadeDown 1.2s ease;
+}
+
+
+/* التورتة */
+
+.cake {
+    width: 160px;
+    animation: pop 1.5s ease;
+}
+
+
+/* زرار */
+
+.next-btn {
+    margin-top: 40px;
+    width: 80%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: #ff6f91;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeUp 1.6s ease;
+}
+
+
+/* بلالين */
+
+.balloon {
+    width: 60px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    animation: fly 8s infinite ease-in;
+}
+
+.pink {
+    background: #ff6f91;
+    left: 15%;
+}
+
+.purple {
+    background: #b983ff;
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.yellow {
+    background: #ffd93d;
+    left: 80%;
+    animation-delay: 4s;
+}
+
+
+/* أنيميشن */
+
+@keyframes fly {
+    from {
+        bottom: -100px;
+    }
+    to {
+        bottom: 110%;
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes cardIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
